@@ -1,0 +1,12 @@
+.sub-container {
+    border: solid red;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.subject-list-container{
+    border: solid purple;
+    padding: 5px;
+    margin: 8px;
+}
