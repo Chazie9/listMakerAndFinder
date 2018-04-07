@@ -9,15 +9,28 @@ class App extends Component {
     constructor(props) {
         super(props)
 
+        this.state = {
+            learningPath: []
+        }
+
+        this.addToUsersLP = this.addToUsersLP.bind(this);
+
     }
+
+    addToUsersLP(subjects) {
+        this.setState = {
+            learningPath: subjects
+        }
+    }
+
 
     render() {
         return(
             <div>
-                <Board />
+                {/* <Board /> */}
                 <div className="page-container">
-                    <Bucket>this is where what I want goes</Bucket>
-                    <SubjectList />
+                    <Bucket selectedSubs={this.state.learningPath} >this is where what I want goes</Bucket>
+                    <SubjectList addToLP={this.addToUsersLP}/>
                 </div>
             </div>
         )

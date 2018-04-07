@@ -7,7 +7,7 @@ class TimeInterval extends Component {
             <div>
                 Enter Time Interval: 
                 <input></input>
-                <button>Submit</button>
+                <button onClick={this.props.onClick}>Submit</button>
             </div>
         )   
     }

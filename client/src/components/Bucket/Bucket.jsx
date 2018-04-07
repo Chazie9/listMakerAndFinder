@@ -13,7 +13,9 @@ class Bucket extends Component {
     render() {
         return (
             <div className="outline">
-                
+                {this.props.selectedSubs.map((sub) => {
+                    
+                })}
             </div>
 
         )

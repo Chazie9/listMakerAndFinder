@@ -10,3 +10,10 @@
     padding: 5px;
     margin: 8px;
 }
+
+.subjects-contained {
+    border: solid green;
+    display: flex;
+    flex-direction: flex-start;
+    align-items: center;
+}
