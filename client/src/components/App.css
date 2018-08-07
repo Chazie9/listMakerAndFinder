@@ -1,4 +1,13 @@
 .page-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    margin: 50px;
+}
+
+.headerSection {
+
+}
+
+.bodySection {
+
 }
