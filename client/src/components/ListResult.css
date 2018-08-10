@@ -1,0 +1,19 @@
+.resultDiv {
+    
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.resultCard {
+    display: flex;
+    flex-direction: column;
+}
+
+.resultBody {
+   
+}
+
+.resultImg {
+   
+}

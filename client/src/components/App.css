@@ -1,4 +1,4 @@
-.page-container {
+.pageContainer {
     display: flex;
     flex-direction: column;
     margin: 50px;
@@ -10,4 +10,9 @@
 
 .bodySection {
 
+}
+
+.listOverview {
+    border: 1px solid black;
+    height: 400px;
 }

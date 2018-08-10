@@ -1,0 +1,4 @@
+.savedListOfParts {
+    display: flex;
+    flex-direction: column;
+}

@@ -8,12 +8,14 @@ import './PartList';
 
 import { Button } from 'reactstrap';
 
-class PartList extends Component {
+class MakeAList extends Component {
 
     constructor(props) {
         super (props)
         
         this.state = {
+            title: "",
+            tutorial: "",
             partName: "",
             prepedPartName: "",
             item1: '',
@@ -70,6 +72,18 @@ class PartList extends Component {
         }
     }
 
+    handleTitle = (e) => {
+        this.setState({
+            title: e.target.value,
+        })
+    }
+
+    handleTutorial = (e) => {
+        this.setState({
+            tutorial: e.target.value,
+        })
+    }
+
     handleChange = (e) => {
         console.log(e);
         let prepVal = e.target.value.split(' ').join('+')
@@ -85,18 +99,18 @@ class PartList extends Component {
             <div>
                 <div className="inputTitle">
                     Title:
-                    <input />
+                    <input value={this.state.inputTitle} onChange={(e) => this.handleTitle(e)} />
                 </div>
-                <div className="inputLocation">
-                    Location:
-                    <PartListSettings />
+                <div className="inputTutorial">
+                    Link to tutorial: 
+                    <input value={this.state.inputTutorial} onChange={(e) => this.handleTutorial(e)} />
                 </div>
                 <br />
                 <div className="inputParts">
-                    Please enter the part your looking for below:
+                    Please enter the parts required to complete the tutorial:
                     <br />
                     <input value={this.state.partName} onChange={(e) => this.handleChange(e)} />
-                    <Button onClick={() => this.handleTheSearch()}>Search for part</Button>
+                    {/* <Button onClick={() => this.handleTheSearch()}>Search for part</Button> */}
                     <Button onClick={() => this.addPartToList()}>Add part to list</Button>
                 </div>
 
@@ -106,19 +120,9 @@ class PartList extends Component {
                    <li>{this.state.item3}</li>
                    <Button onClick={() => this.handleSaveListAndSearch()}>Save list and Search</Button>
                 </div>
-
-                <div className="results">
-                    {this.props.partListSource.map(function(item,i) { 
-                        return <div key={i}>{item.title}</div>
-                    })}
-                    <Part foundParts={this.props.partListSource} />
-                </div>
-                <div>
-                    <ListOverview partList={this.state.partList} foundParts={this.props.partListSource}/>
-                </div>
             </div>
         )
     }
 }
 
-export default PartList;
+export default MakeAList;
